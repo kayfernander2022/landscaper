@@ -11,11 +11,13 @@ tools = [
 
 def mow_lawn():
   tool = tools[game["tool"]]
-  print(f"You have mowed the lawn with your {tool['name']} and made {tool['profit']}")
+  print(f"You have mowed the lawn with your {tool['name']} and made ${tool['profit']}")
   game["money"] += tool["profit"]
 
 
-
+def check_stats():
+  tool = tools[game["tool"]]
+  print(f"You currently have ${game['money']} and are using your {tool['name']} to mow lawns")
 
 while(True):
   
