@@ -5,7 +5,8 @@ tools = [
   {"name": "teeth", "profit": 1, "cost": 0 },
   {"name": "rusty scissors", "profit": 5, "cost": 5 },
   {"name": "old-lawnmower", "profit": 50, "cost": 25 },
-  {"name": "fancy power lawnmower", "profit": 100, "cost": 250 }
+  {"name": "fancy power lawnmower", "profit": 100, "cost": 250 },
+  {"name": "team of starving students", "profit": 250, "cost": 500 }
 ]
 
 
