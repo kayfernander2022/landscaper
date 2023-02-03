@@ -26,19 +26,24 @@ def check_stats():
   
   
 def upgrade():
-  if (game["tool"] >= len(tools) - 1):
-    print("no more upgrades")
+  if (game["tool"] >= len(tools) - 1):#if current tool is the last tool in list
+    print("no more upgrades")#when i have done all upgrades
     return 0   
-  upgraded_tool = tools[game["tool"] + 1]
-  if (upgraded_tool == None):
-    print("There are no more upgrades")
-    return 0
+  upgraded_tool = tools[game["tool"] + 1]#the upgraded tool is the current tool +1
+  
   if (game["money"] < upgraded_tool ["cost"]):
     print("You do not have enough. Keep cutting!")
     return 0
   print("You are upgrading your tool")
-  game["money"] -= upgraded_tool ["cost"]
-  game ["tool"] += 1
+  game["money"] -= upgraded_tool ["cost"]# reduce your money by tool cost
+  game ["tool"] += 1 #tool now = next num
+  
+  
+def check_winner():
+  if (game["tool"] == 4 and game["money"] >= 1000):
+    print("Congratulations!, You win.") 
+    return True #or return false
+  return False
 
 while(True):
   
@@ -57,4 +62,7 @@ while(True):
     
     if(user_choice == 4):
       print("You have quit the game")
+      break
+    
+    if(check_winner()):
       break
